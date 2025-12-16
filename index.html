@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>おさおっさんのホームページ</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>おさおっさんのホームページへようこそ！</h1>
+        </header>
+        <div class="preface">
+            <div class="row">
+                <div class="col-sm-offset-4 col-sm-2 col-md-offset-4 col-md-2 col-lg-offset-4 col-lg-2">
+                    <img src="img/IMG_0049g.JPG" alt="おさおっさんの写真" width="120" height="180">
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div id="showClock"></div>
+                    <div class="motto">
+                        わたしのモットー<br>
+                        ||<br>
+                        「あ・た・ま」<br>
+                        （<span>あ</span>かるく<br>
+                        <span>た</span>のしく<br>
+                        <span>ま</span>えむきに）
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="information">
+            <div class="row">
+                <div class="col-xs-1">
+                </div>
+                <div class="col-xs-10">
+                    <h3>自己紹介</h3>
+                    <ul>
+                        <li>好きなこと: くうねるあそぶ</li>
+                        <li>また行きたいところ: ベルリン・フィルハーモニーホールのステージ<br>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.2930680400027!2d13.367504315987588!3d52.5100351447198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851b60505f42b%3A0xfd9e1fdcc2650066!2z44OZ44Or44Oq44Oz44O744OV44Kj44Or44OP44O844Oi44OL44O8!5e0!3m2!1sja!2sjp!4v1667821526972!5m2!1sja!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+                    </ul>
+                    <h3>趣味</h3>
+                    <ul>
+                        <li><span>おーぼら</span> オーボエを吹いています！</li>
+                    </ul>
+                    <h3>リンク集</h3>
+                    <ul>
+                        <li><a href="http://online.wsj.com/video/a-path-to-carnegie-hall-via-youtube/7C898CD7-B9FE-4D8B-AC80-6D011A5C33AD.html"
+                                target="_self">米ウォール・ストリート・ジャーナルの特集記事💦</a></li>
+                        <li><a href="https://www.facebook.com/armeniawindfestival/posts/665467560309050:0"
+                                target="_blank">アルメニア国際音楽祭の主催者が作ってくれたポスター💦</a></li>
+                    </ul>
+                    <div class="reference">
+                        ◆ このWebページは、以下を参考にさせていただきました。
+                        <ul>
+                            <li>
+                                <a href="https://book.mynavi.jp/ec/products/detail/id=65861" target="_self">これからWebをはじめる人のHTML＆CSS、JavaScriptのきほんのきほん (たにぐちまこと著 マイナビ出版)</a>
+                            </li>
+                            <li>
+                                <a href="http://www.shurey.com/js/samples/2_msg10.html" target="_self">http://www.shurey.com/js/samples/2_msg10.html</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <hr> -->
+        <footer class="afterword">
+            <h2>こんな私ですが、どうぞよろしく！</h2>
+        </footer>
+    </div>
+    <script>
+        //*** 現在の日時を表示する *******************
+        // ゼロを追加する
+        var addZero = function(value) {
+            if (value < 10) {
+                value = '0' + value;
+            }
+            return value;
+        };        
+        timerID = setInterval(clock, 100); //0.1秒毎にclock()を実行
+        function clock() {
+            document.getElementById("showClock").innerHTML = getNow();
+        }
+        function getNow() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = now.getMonth() + 1; //１を足すこと
+            month = addZero(month);
+            var day = now.getDate();
+            day = addZero(day);
+            var dayOfWeek = now.getDay(); //曜日(0～6=日～土)
+            var hour = now.getHours();
+            hour = addZero(hour);
+            var min = now.getMinutes();
+            min = addZero(min);
+            var sec = now.getSeconds();
+            sec = addZero(sec);
+            //曜日の選択肢
+            var daysOfWeek = new Array("日", "月", "火", "水", "木", "金", "土");
+            //出力用
+            var s = "【" + year + "/" + month + "/" + day + " (" + daysOfWeek[dayOfWeek] + ") " + hour + ":" + min + ":" + sec + "】"; 
+            return s;
+        }
+    </script>
+</body>
+</html>
