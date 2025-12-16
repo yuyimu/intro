@@ -1,0 +1,71 @@
+body{
+    background-color: #EEE;
+    font-size: 25px;
+    padding: 15px;
+    color: #000;
+}
+.container {
+    max-width: 600px;
+    box-shadow: 0 0 5px rgb(100 100 100);
+    border: 2px solid #aaa;
+    padding: 0px;
+}
+header {
+    background-color: rgb(56, 87, 35);
+    padding: 10px;
+    color: #afa;
+}
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+}
+.preface{
+    margin: 10px;
+    text-align: center;
+}
+#showClock {
+    text-align: center;
+    font-size: 20px;
+    color: #0fd673;
+  }  
+.information span{
+    text-decoration: line-through;
+}
+.information h3 {
+    font-size: 20px;
+    margin: 6px 0 3px 0;
+    padding: 5px 10px;
+    background-color: rgb(56, 87, 35);;
+    border: 1px solid #000;
+    color: #afa;
+    text-align: center;
+}
+.information h4{
+    font-size: 15px;
+    text-align: center;
+}
+.information ul{
+    list-style-type: disc;
+    margin: 0;
+}
+.information li{
+    font-size: 20px;
+    padding: 0 15px;
+}
+.reference {
+    margin: 8px 0;
+    font-size: 12px;
+}
+footer {
+
+}
+footer h2 {
+    background-color: rgb(56, 87, 35);; 
+    padding:10px;
+    color: #9f9;   
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+}
